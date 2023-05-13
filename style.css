@@ -316,19 +316,7 @@ footer{
     color: rgb(100, 100, 100);
     cursor: pointer;
 }
-@media (min-width:200px) and (max-width:699px) {
-     
 
-    body{
-        background-color: black;
-    }
-    .seccion1{
-        width: 100%;
-        height: 80%;
-        background-color:aqua ;
-    }
-  
-}
 @media (min-width:700px) and (max-width:1000px) {
      
 
@@ -336,26 +324,56 @@ footer{
         width: 100%;
         margin-left: -10%;
         margin-bottom: 10px;
-        font-size: 400px;
+    }
+    header h1{
+        font-size: 50px;
+
+    }
+    header .logoalura{
+        width: 15%;
+        height: 55%;
     }
   
     main{
         display: block;
-        height: 77%;
     }
 
     .seccion1{
         margin-top: 7%;
         width: 100%;
-        height: 40%;
+        height: 48%;
+        background-color: #1A2980;
         margin-bottom: 10%;
+
+    }
+    .area{
+        height: 75%;
+        font-size: 45px;
+        border-radius: 40px;
+
+        border: black solid;
+        box-shadow: 1px 1px 10px 1px;
+        position: relative;
+
+    }
+
+    .contenedor-botones{
+        width: 100%;
+        display: block;
+        background-color: #26D0CE;
+        height: 20%;
+        overflow: hidden;
+        
 
     }
     .btn-desencriptar, .btn-encriptar{
         width: 40%;
-        height: 17%;
-        font-size: 18px;
-        margin-left: 10%;
+        height: 80%;
+        box-shadow: 1px 1px 10px 1px black ;
+        border: none;
+        margin-right: 5%;
+        font-size: 24px;
+
     }
     .seccion2{
         width: 100%;
@@ -365,21 +383,50 @@ footer{
     .contenedor-munieco{
         width: 60%;
         height: 100%;
+        
     }
 
     .contenedor-munieco img{
-        width: 60%;
+        width: 90%;
+        margin-left: 10%;
    
     }
+    .inicio{
+        height: 40%;
+        width: 80%;
+        margin: auto;
+        font-size: 20px;    
+        margin-top: 18%;
+        margin-bottom: 32%;
+    }
     .bloque{
-        font-size: 12px;
+        font-size: 15px;
         padding-top: 8%;
     }
-    footer{
-        background-color: #d7734c;
-        height: 2%;
+    .contenedor-h3{
+        font-size: 20px;
     }
+    footer{
+        height: 2%;
+        font-size: 25px;
+        margin-top: -5%;
+    }
+    .resul{
+        width: 100%;
+        height: 70%;
+        background-color: #1A2980;
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+      
+      @keyframes slidein {
 
+      
+        to {
+          width: 100%;
+          margin-top: -100%;
+          height: 35%; }
+      }
 
 }
 
