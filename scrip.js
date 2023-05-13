@@ -6,6 +6,7 @@ var parrafo = document.querySelector(".contenedor-parrafo")
 var resultado = document.querySelector(".texto-resultado")
 var copiado = document.querySelector(".copiado");
 var mensa = document.querySelector(".miVentana");
+var resul = document.querySelector(".resul");
 
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
@@ -18,13 +19,15 @@ function encriptar(){
     resultado.textContent = encriptarTexto(area);
 }
 
-function desencriptar(){
+function 
+desencriptar(){
     ocultarAdelante();
     var area = recuperarTexto()
     resultado.textContent = desencriptarTexto(area);
 }
 
 function recuperarTexto(){
+    resul.classList.add("animacion");
     var area = document.querySelector(".area");
     return area.value
 }
