@@ -15,12 +15,14 @@ botonDesencriptar.onclick = desencriptar;
 
 function encriptar(){
     ocultarAdelante();
-    var area = recuperarTexto()
+
+    var area = recuperarTexto()    
+
     resultado.textContent = encriptarTexto(area);
+
 }
 
-function 
-desencriptar(){
+function desencriptar(){
     ocultarAdelante();
     var area = recuperarTexto()
     resultado.textContent = desencriptarTexto(area);
@@ -29,14 +31,14 @@ desencriptar(){
 function recuperarTexto(){
     resul.classList.add("animacion");
     var area = document.querySelector(".area");
-    return area.value
+
+    return area.value;
 }
 
 function ocultarAdelante(){
     munieco.classList.add("ocultar");
     h3.classList.add("ocultar");
     parrafo.classList.add("ocultar");
-    
 }
 function mostrarMensaje() {
     document.getElementById("miVentana").style.display = "block";
@@ -48,16 +50,13 @@ function mostrarMensaje() {
 
 
 
-
 function encriptarTexto(mensaje){
-    var texto = mensaje;
+    var texto = mensaje.toLowerCase();
     var textoFinal = "";
     if (mensaje==""){
         alert("La casilla está vacía, por favor introduzca un texto.")
     }
-    else{
 
-    }
     for(var i = 0; i < texto.length; i++){
         if(texto[i] == "a"){
             textoFinal = textoFinal + "ai"
@@ -82,13 +81,14 @@ function encriptarTexto(mensaje){
     }  
     return textoFinal;
 
-
-
 }
 
 function desencriptarTexto(mensaje){
     var texto = mensaje;
     var textoFinal = "";
+    if (mensaje==""){
+        alert("La casilla está vacía, por favor introduzca un texto.")
+    }
 
     for(var i = 0; i < texto.length; i++){
         if(texto[i] == "ai"){
