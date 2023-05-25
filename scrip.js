@@ -14,6 +14,7 @@ botonDesencriptar.onclick = desencriptar;
 
 
 function encriptar(){
+
     ocultarAdelante();
 
     var area = recuperarTexto()    
@@ -36,9 +37,17 @@ function recuperarTexto(){
 }
 
 function ocultarAdelante(){
-    munieco.classList.add("ocultar");
-    h3.classList.add("ocultar");
-    parrafo.classList.add("ocultar");
+    
+    var mensaje = recuperarTexto(); // Recuperar el mensaje
+    
+    if (mensaje === "") {
+        alert("La casilla está vacía, por favor introduzca un texto.")
+    } else {
+        munieco.classList.add("ocultar");
+        h3.classList.add("ocultar");
+        parrafo.classList.add("ocultar");
+    }
+
 }
 function mostrarMensaje() {
     document.getElementById("miVentana").style.display = "block";
@@ -53,9 +62,7 @@ function mostrarMensaje() {
 function encriptarTexto(mensaje){
     var texto = mensaje.toLowerCase();
     var textoFinal = "";
-    if (mensaje==""){
-        alert("La casilla está vacía, por favor introduzca un texto.")
-    }
+
 
     for(var i = 0; i < texto.length; i++){
         if(texto[i] == "a"){
@@ -86,9 +93,6 @@ function encriptarTexto(mensaje){
 function desencriptarTexto(mensaje){
     var texto = mensaje;
     var textoFinal = "";
-    if (mensaje==""){
-        alert("La casilla está vacía, por favor introduzca un texto.")
-    }
 
     for(var i = 0; i < texto.length; i++){
         if(texto[i] == "ai"){
